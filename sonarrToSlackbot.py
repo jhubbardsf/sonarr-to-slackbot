@@ -24,7 +24,7 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
 
         data = json.loads(post_body)
 
-        output = 'Downloaded "' + str(data['Series']['Title']) + '"\n' + \
+        output = str(data['EventType']) + str(data['Series']['Title']) + '"\n' + \
                 'S' + str(data['Episodes'][0]['SeasonNumber']) + ' E' + \
                 str(data['Episodes'][0]['EpisodeNumber']) + ', "' + \
                 str(data['Episodes'][0]['Title']) + '" (' + str(data['Episodes'][0]['Quality']) + ')'
